@@ -31,14 +31,14 @@ public class ICICI implements BankInterface{
 	
 	
 	public void deposit(int amount) {
-		customer.setBalance(customer.getBalance + amount);
+		customer.setBalance(customer.getBalance() + amount);
 	}
 	public double calInterest(double interestForYears) {
-		return (customer.getBalance * interestRate *interestForYears)/100.0 ;
+		return (customer.getBalance() * interestRate *interestForYears)/100.0 ;
 
 	}
 	public void withDraw(int amount) {
-		return customer.setBalance(customer.getBalance - amount);
+		customer.setBalance(customer.getBalance() - amount);
 
 	}
 }

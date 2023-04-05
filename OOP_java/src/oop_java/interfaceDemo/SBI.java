@@ -1,4 +1,5 @@
 package oop_java.interfaceDemo;
+
 public class SBI implements BankInterface{
 	
 	private Customer customer;
@@ -27,11 +28,16 @@ public class SBI implements BankInterface{
 	
 
 	public void deposit(int amount) {
-		customer.setBalance(customer.getBalance + amount);
+		customer.setBalance(customer.getBalance() + amount);
 	}
 	public double calInterest(double interestForYears) {
-		return (customer.getBalance * interestRate *interestForYears)/100.0 ;
+		return (customer.getBalance() * interestRate *interestForYears)/100.0 ;
 
+	}
+
+	@Override
+	public void withDraw(int amount) {
+		
 	}
 }
 	
